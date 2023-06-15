@@ -1,0 +1,539 @@
+@font-face {
+    font-family: headingFont;
+    src: url(../assets/fonts/AsmelinaHarley.ttf);
+  }
+  
+  @font-face {
+    font-family: textFont;
+    src: url(../assets/fonts/estre.ttf);
+  }
+  
+  @font-face {
+    font-family: rageopt;
+    src: url(../assets/fonts/rage.TTF);
+  }
+  
+  @font-face {
+    font-family: Staccato222BT;
+    src: url(../assets/fonts/Staccato222BT.ttf);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body[data-aos-duration="7000"] [data-aos],
+  [data-aos][data-aos][data-aos-duration="7000"] {
+    -webkit-transition-duration: 7000ms;
+            transition-duration: 7000ms;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+
+
+  
+  #bb {
+    background: url(../assets/backgroundImages/aboutUs_bg.png), linear-gradient(#7a5333, #ac946b) center center;    
+    background-repeat: repeat;
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    position: fixed;
+  }
+
+  #banner {
+    width: 100vw;
+    height: auto;
+    position: absolute;
+  }
+  
+  .welcomeText {
+    position: absolute;
+    left: calc(50% - 18rem);
+    top: calc(50% - 4.5rem);
+  }
+  
+  .welcomeText h1 {
+    font-family: Staccato222BT;
+    color: #fcfce3;
+    font-size: 32px;
+    font-weight: 400;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background: url("../assets/bglogo.svg") center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 85px;
+  }
+  
+  .menu__toggler {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 9999;
+    height: 28px;
+    widows: 28;
+    outline: none;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  span,
+  .color-logo,
+  span::after,
+  span::before {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 2.5px;
+    border-radius: 20px;
+    -webkit-transition: 500ms cubic-bezier(0, 77, 0, 1);
+    transition: 500ms cubic-bezier(0, 77, 0, 1);
+  }
+  
+  .menu_white,
+  span.menu_white::before,
+  span.menu_white::after {
+    background: black;
+  }
+  
+  .menu_black,
+  span.menu_black::before,
+  span.menu_black::after {
+    background: black;
+  }
+  
+  span::before {
+    top: -8px;
+  }
+  
+  span::after {
+    top: 8px;
+  }
+  
+  .menu__toggler.active > span {
+    background: transparent;
+  }
+  
+  .menu__toggler.active > span::after,
+  .menu__toggler.active > span::before {
+    background: #631f00;
+    top: 0;
+  }
+  
+  .menu__toggler.active > span::before {
+    -webkit-transform: rotate(-225deg);
+            transform: rotate(-225deg);
+  }
+  
+  .menu__toggler.active > span::after {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+  }
+  
+  .menu {
+    position: fixed;
+    z-index: 998;
+    left: -100%;
+    color: #631f00;
+    height: 100vh;
+    width: 20%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
+    padding: 0 100px 0 100px;
+    background: #ffffe0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: 500ms left cubic-bezier(0.77, 0, 0.175, 1);
+    transition: 500ms left cubic-bezier(0.77, 0, 0.175, 1);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .menu.active {
+    left: 0;
+  }
+  
+  .menu a {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    color: #631f00;
+  }
+  
+  .fixed-center-logo {
+    z-index: 9999;
+    display: block;
+  }
+  
+  .fixed-center-logo .centerlogo {
+    position: fixed;
+    width: 100px;
+    height: auto;
+    top: 10px;
+    margin: 0 auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+  }
+  
+  .menuButton-wrapper {
+    z-index: 9999;
+    position: fixed;
+    text-decoration: none;
+    right: 30px;
+    top: 24px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 13px;
+  }
+  
+  .menuButton-wrapper .menuButton {
+    display: block;
+    margin: 4px 15px 1px 15px;
+  }
+  
+  .menuButton-wrapper .menuButton p {
+    float: right;
+    text-decoration: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 3px;
+    margin-left: 10px;
+  }
+  
+  .menuButton-wrapper .menuButton .serving-dish {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 27px;
+    margin: 5px 55px 5px 0;
+  }
+  
+  .white-dish {
+    background: url(../assets/serving-dish-black.png);
+  }
+  
+  .black-dish {
+    background: url(../assets/serving-dish-black.png);
+  }
+  
+  .white-border-color {
+    border-color: black;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .black-border-color {
+    border-color: black;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .menu1 .menu-heading-h1 {
+    font-family: "Dancing Script";
+    color: black;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+  }
+  
+  .menu1 .row1-cat1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    max-height: 100%;
+    margin-top: 20px;
+  }
+  
+  .menu1 .row1-cat1 .food1 {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    margin-right: 30px;
+  }
+  
+  .menu1 .row1-cat1 .food1 .img1 {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 80px;
+    display: inline-block;
+  }
+  
+  .menu1 .row1-cat1 .food2 {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    margin-right: 30px;
+  }
+  
+  .menu1 .row1-cat1 .food2 .img2 {
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    display: inline-block;
+  }
+  
+  .menu1 .row1-cat1 .food3 {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .menu1 .row1-cat1 .food3 .img3 {
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: auto;
+    display: inline-block;
+  }
+  
+  .menu1-list-items {
+    font-family: "textFont";
+    color: black;
+    font-size: 23px;
+    display: block;
+    font-weight: 500;
+  }
+  
+  .menu1-list-items-h2 {
+    font-family: "textFont";
+    color: black;
+    font-size: 18px;
+    display: block;
+    font-weight: 500;
+  }
+  
+  .cat1 {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    text-align: center;
+  }
+  
+  .downArrow {
+    display: block;
+  }
+  
+  .downArrow .scroll-down {
+    position: absolute;
+    color: #fcfce3;
+    text-align: center;
+    bottom: 40px;
+    margin: 0 auto;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    left: 0;
+    right: 0;
+    opacity: 0.3;
+    font-size: 50%;
+    -webkit-transition: top 0.3s;
+    transition: top 0.3s;
+  }
+  
+  .downArrow .down-arrow-amp {
+    position: absolute;
+    color: #fcfce3;
+    text-align: center;
+    bottom: 10px;
+    margin: 0 auto;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    left: 0;
+    right: 0;
+    font-size: 130%;
+    -webkit-transition: top 0.3s;
+    transition: top 0.3s;
+  }
+  
+  .hide-it-not {
+    visibility: visible;
+  }
+  
+  .hide-it {
+    visibility: hidden;
+  }
+
+
+  /* Careers navigation */
+  
+.feedback-h1 {
+    font-family: "Dancing Script";
+    margin: 0;
+    letter-spacing: 0px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  
+  .franchise-h2 {
+    display: block;
+    margin: 0px 60px 20px 60px;
+    font-family: "textfont";
+    font-size: 26px;
+    font-weight: 400;
+    text-align: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    color: black;
+  }
+  
+  .one {
+    margin-top: 10px;
+  }
+  
+  .main {
+    display: table;
+    width: 100%;
+  }
+  
+  form {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  input[type="text"] {
+    margin-bottom: 12px;
+    padding: 10px;
+    color: #000;
+    width: 80%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid #fcfce3;
+    border-radius: 6px;
+    background-color: #fcfce3;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border: 4px solid #d6ab67;
+  }
+  
+  .submit-button {
+    background-color: #d6ab67;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    padding: 11px 22px;
+    text-decoration: none;
+    margin-top: 25px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media screen and (max-width: 64rem) {
+    .col {
+      width: calc(33.333333% - 2rem);
+    }
+  }
+  
+  @media screen and (max-width: 48rem) {
+    .col {
+      width: calc(50% - 2rem);
+    }
+  }
+  
+  @media screen and (max-width: 32rem) {
+    .col {
+      width: 100%;
+      margin: 0 0 2rem 0;
+    }
+  }
+
+  .content {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+  }
+
+  .WhoAreWe {
+    padding: 0;
+    font-family: "headingFont";
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 20px;
+  }
+  
+
+  .details {
+    margin: 0px 60px 20px 60px;
+    font-family: "textfont";
+    text-align:center; 
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: 200;
+    text-align: justify;
+    -ms-flex-line-pack: justify;
+        align-content: justify;
+    color: black;
+    max-width: 800px;  
+    margin: auto;
+  }
+
+  .container {
+    max-width: 800px;
+    display: block;
+    align-items: start;
+    margin: auto;
+  }
+
+  
+  .personal-details {
+    font-family: "textfont";
+    text-align: left;
+    /* align-items: center; */
+    font-size: 18px;
+    display: block;
+  }
+
+  .personal-details span {
+    margin-left: 20px;
+  }
+
+  .one1 {
+    margin-left: 10px;
+  }
+
+
+  .personal-details span {
+    margin-left: 20px;
+  }
+
+  .space {
+    height: 100px;
+    width: 10px;
+  }
