@@ -1,21 +1,29 @@
 @font-face {
   font-family: headingFont;
   src: url(../assets/fonts/AsmelinaHarley.ttf);
+  font-display: swap;
+
 }
 
 @font-face {
   font-family: textFont;
   src: url(../assets/fonts/estre.ttf);
+  font-display: swap;
+
 }
 
 @font-face {
   font-family: rageopt;
   src: url(../assets/fonts/rage.TTF);
+  font-display: swap;
+
 }
 
 @font-face {
   font-family: Staccato222BT;
   src: url(../assets/fonts/Staccato222BT.ttf);
+  font-display: swap;
+
 }
 
 body[data-aos-duration="7000"] [data-aos],
