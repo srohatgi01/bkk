@@ -1,0 +1,89 @@
+@font-face {
+    font-family: headingFont;
+    src: url(../assets/fonts/AsmelinaHarley.ttf);
+  }
+  
+  @font-face {
+    font-family: textFont;
+    src: url(../assets/fonts/estre.ttf);
+  }
+  
+  @font-face {
+    font-family: rageopt;
+    src: url(../assets/fonts/rage.TTF);
+  }
+  
+  @font-face {
+    font-family: Staccato222BT;
+    src: url(../assets/fonts/Staccato222BT.ttf);
+  }
+  
+
+.reservation-main-section {
+    margin-top: 20vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.reservation-form {
+    width: 100vw;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+input, select {
+  margin-bottom: 12px;
+  padding: 10px;
+  color: #000;
+  width: 80%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #fcfce3;
+  border-radius: 6px;
+  background-color: #fcfce3;
+}
+
+input:focus,
+textarea:focus {
+  border: 4px solid #d6ab67;
+}
+
+.submit-button {
+  background-color: #d6ab67;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 11px 22px;
+  text-decoration: none;
+  margin-top: 25px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reservation-heading {
+  font-family: headingFont;
+  font-size: 48px;
+  margin: 0 8px;
+}
+
+.reservation-subheading {
+  font-family: textFont;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 8px;
+}
+
+input[type="submit"] {
+  background-color: #d6ab67;
+  border: #d6ab67;
+  font-size: 18px;
+  font-weight: 600;
+}

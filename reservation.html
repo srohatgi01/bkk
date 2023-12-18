@@ -33,6 +33,9 @@
     
         <link rel="stylesheet" type="text/css" media="screen and (min-device-width: 1800px)" href="style/franchise.css" />
         <!--Main CSS File-->
+
+        <link rel="stylesheet" type="text/css" href="style/reservation.css" />
+        <!-- reservation css file -->
     
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!--AOS CSS-->
@@ -98,23 +101,6 @@
             </div>
 
         </a>
-        <div id="franchise" class="modal" style="height: 450px; background-color: #8F6F49;">
-            <!--Design Franchise Form here-->
-            <h1 class="feedback-h1">Franchise —</h1>
-            <h2 class="franchise-h2">To do business with us, fill out the details. Our team will get in touch with
-                you
-                soon.</h2>
-
-            <div class="main">
-                <form action="franchiseform.php" class="feedback-form" method="POST">
-                    <input class="one" type="text" name="name" placeholder="Full Name">
-                    <input type="text" name="mail" placeholder="Your E-mail">
-                    <input type="text" name="number" placeholder="Contact Number">
-                    <input type="text" name="city" placeholder="City">
-                    <button class="submit-button" type="submit" name="submit">SUBMIT</button>
-                </form>
-            </div>
-        </div>
         <div id="careers" class="modal" style="height: 450px; background-color: #8F6F49;">
             <!--Career Modal Box-->
 
@@ -165,57 +151,26 @@
             </div>
         </div>
 
-        <div class="content">
-            <h1 class="WhoAreWe">Franchise</h1>
-            <h2 class="franchise-h2">Franchise Proposal for Bapu Ki Kutia</h2>
-            <p class="details">
-                Dear,<br><br>
-Greetings of the day,<br><br>
-We present to you an exciting business proposal which aims at providing to you as our Franchisee, excellent return at modest investment. <br><br>
-<b>Area: </b>Preferably on ground floor, admeasuring approximately 2500 sq.ft - 3000 sq.ft. (Carpet) with adequate frontage and direct approach. The premises/building should have adequate dedicated parking space.<br><br>
-<b>Location: </b>Assured footfalls with a good and continues flow of people will be the prime criteria for the selection of the location. Strategically located in the vicinity of Multiplexes, Shopping malls, business districts or high potential residential areas.<br><br>
-<b>Premises: </b>The said premises should have a clear title free from all encumbrances. The building should have a completion certificate/ building use (B.U.) permission from the municipal/ local authority. Also a N.O.C. for running a restaurant from the building society should be made available.<br><br>
-<!-- <b>Brand Fee: </b>20 Lacs for the restaurant (one time – Non refundable). Plus taxes.<br><br>
-<b>Franchise fees:</b> Rs. 1, 00,000 or 8% + 18% on net sales whichever is higher every month. As a Management fee.<br><br> -->
-<b>Payment of fees:</b> Brand fee is payable along with the completed Appraisal form. Franchisee fees be payable on a monthly basis on or before the 5th of the subsequent month.<br><br>
-<b>Tenure:</b> 5 years (Extendable for one more term at 50% of Brand fee.
-Municipal Water & Drainage: Franchisee to apply for and procure a municipal water and drainage connection.<br><br>
-<b>Water Storage:</b> Adequate water storage space to be provided by the Franchisee. <br><br>
-<b>Electricity Load:</b> 3 phase, electricity load to be made available at the proposed premises according to the requirement.<br><br>
-<b>Interiors:</b> Interior design concept and blue prints will be provided by our designer and the franchisee has the liberty to either choose our interior designer or appoint one of his choices. Any alteration or changes, if required will subject to our approval.<br><br>
-<b>Equipment Cost:</b> Kitchen layout design, equipment specs and preferred vendor list will be provided by us. Cost of equipment shall be borne by Franchisee.<br><br>
-<b>Safety and security:</b> Installation of fire extinguisher in the premises, emergency numbers in case of any emergency, security guard and proper equipments and gears should be provided to the staff to reduce the chances of accidents in the premises.<br><br>
-<b>Licenses:</b> All required licenses including but not limited to health, Fire N.O.C. Shop & Establishment, Police license and/ or other approvals to be procured by Franchisee at his own cost.<br><br>
-<b>Taxes:</b> All property related taxes and outgoings to be borne by the Franchisee.<br><br>
-<b>Permissions:</b> All necessary permissions required to be obtained from municipal / statutory authorities, landlord, associations or societies for opening and eating/ food outlet to be obtained by the Franchisee. This shall be made available at the time of possession.<br><br>
-<b>Notice:</b> Only Bapu ki kutia since 1964 (Franchisor) can terminate this agreement by giving 3 months notice if it is found that quality of product is being compromised or the customers are dissatisfied by the services. Franchisee cannot terminate this agreement during the tenure.
-<br><br>
-<b>Staff cost: </b>The cost of providing key staff will be recovered from the Franchisee, though they shall always remain in our rolls only.<br><br>
-<b>Travel Expenses:</b> All expenses incurred by us and our team of Consultants, Designers or Management staff towards travel, lodging, boarding and other incidental expenses will be necessary during initial discussions, planning stage, before during and after commissioning of the project.<br><br><br>
-            </p>
-            <p class="details"><b>From</b></p><br>
-            <div class="container">
-                <div class="personal-details">
-              
-                    <p class="one1">Amit Sujwani</p>
-                    <!-- <p class="two">+91 9090909090</p> -->
-                    <span class="three"><b>(Director)</b></span>
-                </div>
-            </div>
-            <br>
-            <!-- <div class="personal-details">
-                  
-                <p class="one1">Anubhav Sujwani</p>
-                <p class="two">+91 9090909090</p>
-                <span class="three"><b>(MD)</b></span>
-            </div>
-            </div> -->
+       <!-- Reservation Page Code -->
+        <section class="reservation-main-section">
+            <h1 class="reservation-heading">Reservations</h1>
+            <h3 class="reservation-subheading">Fill the form below to book your seat online!</h3>
+            <form class="reservation-form" action="reservations.php" method="POST">
+                <input name="name" type="text" placeholder="Full Name" autocomplete />
+                <input name="contact" type="number" placeholder="Contact No." autocomplete />
+                <select name="restaurant" placeholder="Choose Restaurant">
+                    <option value="New Market - Bhopal">New Market - Bhopal</option>
+                    <option value="Kolar Road - Bhopal">Kolar Road - Bhopal</option>
+                    <option value="Vijay Nagar - Indore">Vijay Nagar - Indore</option>
+                    <option value="Onam Plaza - Indore">Onam Plaza - Indore</option>
+                    <option value="Sapna Sangeet - Indore">Sapna Sangeet - Indore</option>
+                    <option value="Narmada Road - Jabalpur">Narmada Road - Jabalpur</option>
+                </select>
+                <input name="datetime" type="datetime-local" placeholder="Select Date & Time"/>
+                <input name="submit" type="submit" />
+            </form>
+        </section>
 
-            <div class="space"></div>
-            
-    </div>
-
-    </section>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -228,8 +183,6 @@ Municipal Water & Drainage: Franchisee to apply for and procure a municipal wate
     <!--Jquery Modal JS & CSS-->
     <script src="script/scrollspy/vanillajs-scrollspy.min.js"></script>
     <!--ScrollSpy JS file-->
-    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!--Slick Slider JS file-->
     <script src="script/main.js"></script>
     <!--main JS file-->
 </body>

@@ -222,12 +222,13 @@
   }
   
   .menuButton-wrapper .menuButton p {
-    float: right;
-    text-decoration: none;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 3px;
-    margin-left: 10px;
-  }
+      float: right;
+  text-decoration: none;
+  visibility: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 3px 0 0 0;
+}
   
   .menuButton-wrapper .menuButton .serving-dish {
     background-size: cover;
@@ -237,6 +238,41 @@
     margin: 5px 55px 5px 0;
   }
   
+.menuButton-wrapper {
+  z-index: 9999;
+  position: fixed;
+  text-decoration: none;
+  right: 30px;
+  top: 24px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 13px;
+  padding: 0;
+}
+
+.menuButton-wrapper .menuButton {
+  display: block;
+  margin: 3px 0 3px 17px;
+  padding: 0;
+}
+
+.menuButton-wrapper .menuButton p {
+  float: right;
+  text-decoration: none;
+  visibility: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 3px 0 0 0;
+}
+
+.menuButton-wrapper .menuButton .serving-dish {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 27px;
+  margin: 5px 0px 5px 0;
+}
+
   .white-dish {
     background: url(../assets/serving-dish-black.png);
   }
@@ -244,7 +280,7 @@
   .black-dish {
     background: url(../assets/serving-dish-black.png);
   }
-  
+ 
   .white-border-color {
     border-color: black;
     color: black;
